@@ -1,0 +1,31 @@
+<section class="contenedor seccion" (click)="consulTodoProdu()">
+<div class="text"><br>
+    <h2 class="fw-300 centrar-texto"><b>Productos</b></h2>
+</div>
+<div (click)="consulTodoProdu()" id="menu">
+    <div class="container">
+        <div class="item">Codigo</div>
+        <div class="item">Nombre</div>
+        <div class="item">Descripcion</div>
+        <div class="item">Precio</div>
+        <div class="item">Imagen</div>
+        <div class="item">Acción</div>
+    </div>
+    <div class="container" *ngFor="let produ of productos | async">
+        <div class="item"><br>{{produ.codigo}}</div>
+        <div class="item"><br>{{produ.nombre}}</div>
+        <div class="item"><br>{{ produ.descripcion }}</div>
+        <div class="item"><br>${{ produ.precio }}</div>
+        <div class="item"><br><img src="" alt="url aquí"> </div>
+        <div class="item"><button routerLink='../iniciarsesion' style="width: 100%; background: green;">Comprar</button></div>
+    </div>
+</div>
+</section>
+<section class="contenedor seccion">
+    <footer class="site-footer">
+        <div class="contenedor-footer">
+            <p class="copyright">BMW Mochis Todos los Derechos Reservados 2021 &copy; </p>
+        </div>
+    </footer>
+</section>
+    

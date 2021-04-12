@@ -1,0 +1,31 @@
+<style>
+    .fuera{
+      background: linear-gradient(-0deg, #001229,#000000,#000000);
+    }
+    button{
+        font-size: 25px;;
+    }
+</style>
+<div class="fuera">
+
+  <div>
+  <button mat-button routerLink="inicio">Inicio</button>
+  <button mat-button routerLink="servicio">Servicios</button>
+  <button *ngIf="iniciosesionServicio.eslogueado()" mat-button routerLink="mivehiculo">Mi(s) Vehiculo(s)</button>
+  <button mat-button [matMenuTriggerFor]="cita">Citas</button>
+  <mat-menu #cita="matMenu">
+    <button mat-menu-item routerLink="agendacita">Agendar una cita</button>
+    <button mat-menu-item>Consultar mi Cita</button>
+  </mat-menu>
+  <button mat-button routerLink="productos">Productos</button>
+  <button mat-button routerLink="nosotros">Nosotros</button>
+  <button mat-button routerLink="contacto">Contacto</button>
+    <button style="float: right;" 
+    *ngIf="!iniciosesionServicio.eslogueado(); else esfalsa" 
+    mat-button routerLink="iniciarsesion"><i>Iniciar Sesión</i>
+    </button>
+    <ng-template #esfalsa>
+      <button mat-button (click)="iniciosesionServicio.cerrarSesion()">Cerrar Sesión</button>
+    </ng-template>
+  </div>
+</div>

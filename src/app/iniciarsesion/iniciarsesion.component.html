@@ -1,0 +1,46 @@
+
+<section class="contenedor seccion">
+    <div class="text">
+        <br>
+        <h2 class="fw-300 centrar-texto"><b>Inicia Sesión</b></h2>
+    </div>
+<div class="container">
+    <div class="item">
+        <div class="form">
+            <div class="formulario">      
+                          <p><label for="usuario">Usuario</label>
+                          <input type="text" id="usuario" placeholder="Ejemplo@correo.com" [(ngModel)]="usuario.email" required><br>
+                          </p>
+                          <p><label for="pass">Contraseña</label>
+                          <input type="password" id="pass" placeholder="Ingresa tu Contraseña" [(ngModel)]="usuario.password" required><br>
+                          </p>
+                        <button (click)="login()">Iniciar Sesión</button>
+                        <div class="container">
+                            <div class="item">
+                            <a href="#" routerLink='../registrarse' style="text-decoration: none; color: white;font-size: medium ;">
+                            Registrarse
+                            </a> 
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="item">
+                            <a href="#" style="text-decoration: none; color: white;font-size: medium ;">
+                            ¿Olvidaste tu contraseña?
+                            </a> 
+                            </div>
+                        </div>
+            </div>  
+        </div>
+    </div>                           
+</div>
+
+
+</section>
+
+<section class="contenedor seccion">
+    <footer class="site-footer">
+        <div class="contenedor-footer">
+            <p class="copyright">BMW Mochis Todos los Derechos Reservados 2021 &copy; </p>
+        </div>
+    </footer>
+</section>

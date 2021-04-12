@@ -1,0 +1,59 @@
+
+<section class="contenedor seccion">
+    <div class="text">
+        <br>
+        <h2 class="fw-300 centrar-texto"><b>Agendar una cita</b></h2>
+    </div>
+<div class="container">
+    <div class="item">
+        <div class="form">
+            <div class="formulario">      
+                          <p><label for="fecha">Elija una Fecha</label>
+                          <input type="date" id="fecha" [(ngModel)]="cita.fecha" required><br>
+                          </p>
+                          <p><label for="hora">Elija una Hora</label>
+                            <select class="form-control" name="hora" id="hora">
+                                <option value="">Elija una hora</option>
+                                <option value="9:00" [(ngModel)]="cita.hora">9:00 AM</option>
+                                <option value="10:00"[(ngModel)]="cita.hora">10:00 AM</option>
+                                <option value="11:00"[(ngModel)]="cita.hora">11:00 AM</option>
+                                <option value="12:00"[(ngModel)]="cita.hora">12:00 PM</option>
+                                <option value="13:00"[(ngModel)]="cita.hora">01:00 PM</option>
+                                <option value="14:00"[(ngModel)]="cita.hora">02:00 PM</option>
+                                <option value="16:00"[(ngModel)]="cita.hora">4:00 PM</option>
+                                <option value="17:00"[(ngModel)]="cita.hora">5:00 PM</option>
+                                </select>
+                          </p>
+                          <p><label for="tipo">Elija un Servicio</label>
+                          <select class="form-control" name="tipo" id="tipo">
+                            <option [(ngModel)]="cita.servicio" value="">Elija el Tipo de Servicio</option>
+                            <option [(ngModel)]="cita.servicio" value="Afinacion">Afinación</option>
+                            <option [(ngModel)]="cita.servicio" value="Suspencion">Suspención</option>
+                            <option [(ngModel)]="cita.servicio" value="Frenos">Frenos</option>
+                            <option [(ngModel)]="cita.servicio" value="Cambio de Aceite">Cambio de Aceite</option>
+                            <option [(ngModel)]="cita.servicio" value="Amortiguadores">Amortiguadores</option>
+                            <option [(ngModel)]="cita.servicio" value="Baterias">Baterias</option>
+                            <option [(ngModel)]="cita.servicio" value="Revision General">Revision General</option>
+                            <option [(ngModel)]="cita.servicio" value="Autoelectrico">Autoelectrico</option>  
+                          </select>
+                          </p>
+                          <p><label for="observaciones">Observaciones</label>
+                            <textarea [(ngModel)]="cita.observaciones" class="form-control" name="observaciones" id="observaciones" rows="10" cols="50" placeholder="Observaciones" required></textarea>
+                          </p>
+                        <button>Agendar Cita</button>
+                        
+            </div>  
+        </div>
+    </div>                           
+</div>
+
+
+</section>
+
+<section class="contenedor seccion">
+    <footer class="site-footer">
+        <div class="contenedor-footer">
+            <p class="copyright">BMW Mochis Todos los Derechos Reservados 2021 &copy; </p>
+        </div>
+    </footer>
+</section>
